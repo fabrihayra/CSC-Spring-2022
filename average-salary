@@ -1,0 +1,28 @@
+def nunumber ():
+    x = int(input("\nEnter numbers you want to average {Zero to stop} : "))
+    return x
+def accumulate (dResult, nuDig) :
+    dResult += nuDig
+    return dResult
+def counter (dCount) :
+    dCount += 1
+    return dCount
+def prinout (dCountr, dResolt, dNudig) :
+    if dNudig != 0:
+        print ("\nSo far, the sum of the ",dCountr," numbers equals ", dResolt)
+    else:
+        print ("\nThe average of the ",dCountr," number equals ",round (dResolt,2))
+def averash (dSum, dCount):
+    return dSum / dCount
+count = int(0)
+result = int(0)
+nuDigit = nunumber ()
+while nuDigit != 0:
+    result = accumulate(result, nuDigit)
+    count = counter(count)
+    prinout(count, result, nuDigit)
+    nuDigit = nunumber ()
+if count != 0:
+   Avg = averash(result, count)
+   prinout(count, Avg, nuDigit)
+input ("\n End of program!")
