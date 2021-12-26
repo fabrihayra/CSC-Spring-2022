@@ -1,0 +1,42 @@
+import AvgFunks.py as eks
+def nunumber ():
+    x= int(input("\Enter numbers you want to average {Zero to stop}:"))
+    return x
+def getinput ():
+    eks = int(input("\Enter numbers you want to average {Zero to stop}:"))
+    return eks
+def accumulate (dResult, nuDig):
+    dResult += nuDig
+    return dResult
+def counter (dCount):
+    dCount += 1
+    return dCount
+def accum (tot, nuqty):
+    nugty += tot
+    return dResult
+def count (Counter):
+    count += 1
+    return Counter
+def averg (Dsum, Dcount):
+    average += 1
+    return Z
+def printout (accum, count, averg):
+    
+    if eks !=0:
+        print ("\So far, the sum of the ",count,"even numbers equals",averg)
+    else:
+        print ("\n The average of the ",count,"numbers equals",round(averg,2))
+def outpt (Count, Sum, eks):
+    return dSum / dCount
+count = int(0)
+result = (0)
+nuDigit = nunumber()
+while nuDigit != 0:
+    result = accumulate (result, nuDigit)
+    count = counter (count)
+    printout (count, result, nuDigit)
+    nuDigit = nunumber()
+if count != 0:
+    Avg = averash (result, count)
+    printout (count, Avg, nuDigit)
+input ("\nEnd of program!")
