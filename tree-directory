@@ -1,0 +1,31 @@
+import os, shutil
+try:
+    os.makedirs("userhome")
+    os.mkdir("userhome/a")
+    os.mkdir("userhome/a/b")
+    os.mkdir("userhome/a/b/d")
+    os.mkdir("userhome/a/b/e")
+    file = open("userhome/a/b/d/d1.txt",'w')
+    file.write('The Finals here!')
+    file.close()
+    file2 = open("userhome/a/b/d/d2.txt",'w')
+    file2.write('Praise The Lord!"')
+    file2.close()
+    shutil.copytree("userhome/a/b","userhome/a/c")
+    shutil.move("userhome/a/c/d", "userhome/a/c/f")
+    shutil.move("userhome/a/c/e", "userhome/a/c/g")
+    shutil.move("userhome/a/c/f/d1.txt", "userhome/a/c/f/f1.txt")
+    shutil.move("userhome/a/c/f/d2.txt", "userhome/a/c/f/f2.txt")
+    file = open("userhome/a/c/f/f1.txt",'r')
+    content = file.read()
+    print("\nContent of file f/f1.txt:",content)
+    file.close()
+    file2 = open("userhome/a/c/f/f2.txt",'r')
+    content = file2.read()
+    print("\nContent of file f/f2.txt:",content)
+    file2.close()
+except FileExistsError:
+    print("FileExistsError")
+finally:
+    shutil.rmtree
+
