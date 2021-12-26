@@ -1,0 +1,11 @@
+start = 4610
+end = 4638
+step = 1
+charPerLine = int(0)
+for x in range (start, end, step):
+    if charPerLine < 1:
+        print (" Unicode ", x , "\tis ", chr(x), end=' ')
+        charPerLine+= 1
+    else:
+        print (" Unicode ", x , "\tis ", chr(x))
+        charPerLine = 0
