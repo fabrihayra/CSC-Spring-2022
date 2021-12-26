@@ -1,0 +1,35 @@
+import turtle 
+sqs=0
+figs=int(input("Enter number of figures: "))
+offset=float(input("Enter offset angle: "))
+turtle.hideturtle()
+turtle.speed('fastest')
+while figs > 0:
+    if figs % 2 === 0:
+     if sqs == 0:
+         turtle.pensize(1)
+         sqs+= 1 
+     else:
+         turtle.pensize(4)
+         sqs = 0
+     for n in range(4):
+      if n % 2 == 0:
+         turtle.pencolor('#00AAFF')
+     else:
+      turtle.pencolor('#FF00FF')
+     turtle.forward(250)
+     turtle.left(90)
+ else:
+   turtle.pensize(1)
+   for w in range(2):
+   if w % 2 == 0:
+      turtle.pencolor('#00AA00')
+      turtle.pensize(1)
+   else:
+      turtle.pencolor('#0000FF')
+      turtle.pensize(4)
+        turtle.circle(128)
+         turtle.left(offset/1.05)
+    turtle.left(offset)
+figs-= 1
+turtle.exitonclick()
