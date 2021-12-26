@@ -1,0 +1,17 @@
+def middle_element(lst):
+  if (len(lst) % 2 == 0):
+    len_list = len(lst)
+    half_list = int(len_list/2)
+    middle_list = lst[half_list-1:half_list+1]
+    total_list = sum(middle_list)/2
+    return total_list
+
+  elif (len(lst) % 2 != 0):
+    odd_len_list = len(lst)
+    int_list = int(odd_len_list + 1)/2
+    mid_odd_list = lst[int(int_list-1):int(int_list)]
+    rm_item = mid_odd_list.pop()
+    return rm_item
+
+  else:
+    return "You have an error in your program! Sorry!!"
