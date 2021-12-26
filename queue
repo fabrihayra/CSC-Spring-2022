@@ -1,0 +1,6 @@
+#Making list 
+queue = ["John", "James", "Amy"]
+#Importing txt as input 
+txt = input()
+queue.append(txt)
+print(queue)
