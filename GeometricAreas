@@ -1,0 +1,72 @@
+#define _USE_MATH_DEFINES
+#define PI 22.0/7.0 
+#include <iostream>
+#include <cmath>
+ 
+using namespace std;
+ 
+int main() {
+ 
+   char menuSelection = '0';
+ 
+   cout << "Select a geometric object:" << endl
+      << endl << "1.Circle"
+      << endl << "2.Equilateral Triangle"
+      << endl << "3.Square"
+      << endl << "4.Cone"
+      << endl << "X No Choice" << endl;
+ 
+   cin >> menuSelection;
+ 
+   if (menuSelection == '1' || menuSelection == '2' ||
+      menuSelection == '3' || menuSelection == '4' ||
+      menuSelection == 'x' || menuSelection == 'X') {
+ 
+      switch (menuSelection) {
+      case '1': 
+      float r, a, d ; 
+      cout<<"\nEnter the Radius of Circle: " ;
+      cin>>r ;
+      a = PI *r*r ;
+      d = 2*PI*r ;
+      cout<<"The area and diameter of a circle having a radius of " << r << " are " << a << " and " << d << " respectively." << endl ;
+      break ;
+        
+      case '2':
+      float b, h, area ;
+      cout << "Enter lenght of one side of an equilateral triangle (the base) and height. \n" ;
+      cin >> b >> h ; 
+      area = 0.5*b*h;
+      cout << "The area and perimeter of an equilateral triangle having a base lenght of " << b << " are " << area << " and " << h << " respectively." << endl ; 
+      break ;
+        
+      case '3': 
+      float len, sArea, per ; 
+      cout << "Enter lenght of one side of Square.\n" ;
+      cin >> len ; 
+      sArea = len*len ; 
+      per = 4*len;
+      cout << "The area and perimeter of a square having a side lenght of " << len << " are " << sArea << " and " << per << ", respectively." << endl ; 
+      break ;
+        
+      case '4':
+      float cn_radius, cn_height, cn_volume, cn_sa, cn_len ; 
+      cout << "Enter radius and height of a cone.\n" ;
+      cin >> cn_radius >> cn_height ; 
+      cn_len = sqrt(cn_radius * cn_radius + cn_height * cn_height);
+	    cn_sa = M_PI * cn_radius * (cn_radius + cn_len);
+	    cn_volume = (1.0/3) * M_PI * cn_radius * cn_radius * cn_height;
+      cout << "The volume and surface area of a cone have the radius " << cn_radius << " and " << cn_height << " is " << cn_volume << " and " << cn_sa << " respectively. " << endl ;
+      break ;
+  
+      case 'X':
+      case 'x':
+      break ;
+ 
+      }
+   }
+   else {
+      cout << "Invalid section. The program could not continue." << endl;
+   }
+   return 0;
+}
